@@ -1,3 +1,4 @@
+import 'package:expense_tracker/widgets/chart/chart.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/models/expense.dart';
@@ -18,7 +19,7 @@ class _ExpensesState extends State<Expenses> {
         title: 'Flutter Course',
         amount: 19.99,
         date: DateTime.now(),
-        category: Category.education),
+        category: Category.work),
     Expense(
         title: 'Cinema',
         amount: 15.69,
@@ -87,7 +88,7 @@ class _ExpensesState extends State<Expenses> {
         ),
         body: Column(
           children: [
-            const Text('The chart'),
+            Chart(expenses: _registerdExpenses),
             Expanded(
               child: mainContent,
             ),
